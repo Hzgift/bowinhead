@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bowinhead — Digital Artist</title>
+    <meta name="description" content="Арты на заказ от художницы bowinhead. Иллюстрации, персонажи, концепт-арт.">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎨</text></svg>">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Syne:wght@600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- ПРЕЛОАДЕР -->
+    <div class="preloader" id="preloader">
+        <div class="preloader-content">
+            <div class="preloader-logo">bowinhead</div>
+            <div class="preloader-bar"><div class="preloader-fill" id="preloader-fill"></div></div>
+            <div class="preloader-percent" id="preloader-percent">0%</div>
+        </div>
+    </div>
+
+    <div id="progress-bar"></div>
+    <div class="cursor-dot"></div>
+    <div class="cursor-outline"></div>
+    <div class="noise-overlay"></div>
+    
+    <!-- Аврора-фон -->
+    <div class="aurora-bg">
+        <div class="bg-blob blob-1"></div>
+        <div class="bg-blob blob-2"></div>
+        <div class="bg-blob blob-3"></div>
+        <div class="bg-blob blob-4"></div>
+    </div>
+    <canvas id="particles-canvas"></canvas>
+
+    <header class="navbar">
+        <a href="#" class="logo">
+            <span class="logo-text" data-scramble>bowinhead</span>
+            <div class="logo-glow"></div>
+        </a>
+        <nav>
+            <a href="#portfolio" class="nav-link"><span data-scramble>Работы</span></a>
+            <a href="#pricing" class="nav-link"><span data-scramble>Прайс</span></a>
+            <a href="#socials" class="nav-link"><span data-scramble>Контакты</span></a>
+        </nav>
+    </header>
+
+    <!-- HERO -->
+    <section class="hero">
+        <div class="hero-badge">
+            <span class="badge-dot"></span>
+            <span>Открыт для заказов</span>
+        </div>
+        <h1 class="hero-title">
+            <span class="word"><span class="letter">А</span><span class="letter">Р</span><span class="letter">Т</span></span><br>
+            <span class="word gradient-text"><span class="letter">Н</span><span class="letter">А</span> <span class="letter">З</span><span class="letter">А</span><span class="letter">К</span><span class="letter">А</span><span class="letter">З</span></span>
+        </h1>
+        <p class="hero-subtitle reveal-text">Привет! Я Bowinhead — создаю уникальные арты по твоим идеям</p>
+        <div class="hero-cta">
+            <a href="#pricing" class="btn btn-primary ripple magnetic">Заказать работу →</a>
+            <a href="#portfolio" class="btn btn-outline ripple magnetic">Смотреть работы</a>
+        </div>
+        <div class="hero-scroll-hint">
+            <span>Scroll</span>
+            <div class="scroll-line"></div>
+        </div>
+    </section>
+
+    <!-- MARQUEE -->
+    <div class="marquee">
+        <div class="marquee-track">
+            <span>BOWINHEAD</span><span class="marquee-dot">✦</span>
+            <span>DIGITAL ART</span><span class="marquee-dot">✦</span>
+            <span>COMMISSIONS OPEN</span><span class="marquee-dot">✦</span>
+            <span>BOWINHEAD</span><span class="marquee-dot">✦</span>
+            <span>DIGITAL ART</span><span class="marquee-dot">✦</span>
+            <span>COMMISSIONS OPEN</span><span class="marquee-dot">✦</span>
+        </div>
+    </div>
+
+    <!-- ПОРТФОЛИО -->
+    <section id="portfolio" class="section">
+        <div class="section-header">
+            <span class="section-number">01</span>
+            <h2 class="section-title">Работы <span class="gradient-text">Bowinhead</span></h2>
+        </div>
+        <div class="portfolio-grid">
+            <div class="portfolio-card tilt-card reveal" data-img="art1.png"><img src="art1.png" alt="Art 1"><div class="card-overlay"><span>Art 01</span></div></div>
+            <div class="portfolio-card tilt-card reveal" data-img="art2.png"><img src="art2.png" alt="Art 2"><div class="card-overlay"><span>Art 02</span></div></div>
+            <div class="portfolio-card tilt-card reveal" data-img="art3.png"><img src="art3.png" alt="Art 3"><div class="card-overlay"><span>Art 03</span></div></div>
+            <div class="portfolio-card tilt-card reveal" data-img="art4.png"><img src="art4.png" alt="Art 4"><div class="card-overlay"><span>Art 04</span></div></div>
+            <div class="portfolio-card tilt-card reveal" data-img="art5.png"><img src="art5.png" alt="Art 5"><div class="card-overlay"><span>Art 05</span></div></div>
+            <div class="portfolio-card tilt-card reveal" data-img="art6.png"><img src="art6.png" alt="Art 6"><div class="card-overlay"><span>Art 06</span></div></div>
+        </div>
+    </section>
+
+    <!-- MARQUEE 2 -->
+    <div class="marquee marquee-reverse">
+        <div class="marquee-track">
+            <span>ILLUSTRATION</span><span class="marquee-dot">✦</span>
+            <span>CHARACTER DESIGN</span><span class="marquee-dot">✦</span>
+            <span>CONCEPT ART</span><span class="marquee-dot">✦</span>
+            <span>ILLUSTRATION</span><span class="marquee-dot">✦</span>
+            <span>CHARACTER DESIGN</span><span class="marquee-dot">✦</span>
+            <span>CONCEPT ART</span><span class="marquee-dot">✦</span>
+        </div>
+    </div>
+
+    <!-- ПРАЙС -->
+    <section id="pricing" class="section">
+        <div class="section-header">
+            <span class="section-number">02</span>
+            <h2 class="section-title">Прайс <span class="gradient-text">лист</span></h2>
+        </div>
+        <div class="pricing-grid">
+            
+            <div class="pricing-card tilt-card reveal">
+                <div class="pricing-icon">✏️</div>
+                <h3>Базовый <span class="gradient-text">скетч</span></h3>
+                <div class="price-list">
+                    <div class="price-item"><span>По плечи</span> <span class="price-val"><span class="counter" data-target="50">0</span> ₽</span></div>
+                    <div class="price-item"><span>По пояс</span> <span class="price-val"><span class="counter" data-target="100">0</span> ₽</span></div>
+                    <div class="price-item"><span>Все тело</span> <span class="price-val"><span class="counter" data-target="150">0</span> ₽</span></div>
+                </div>
+            </div>
+
+            <div class="pricing-card featured tilt-card reveal">
+                <div class="badge">🔥 Популярно</div>
+                <div class="pricing-icon">🎨</div>
+                <h3>Фулл <span class="gradient-text">рендер</span></h3>
+                <div class="price-list">
+                    <div class="price-item"><span>По плечи</span> <span class="price-val"><span class="counter" data-target="350">0</span> ₽</span></div>
+                    <div class="price-item"><span>По пояс</span> <span class="price-val"><span class="counter" data-target="459">0</span> ₽</span></div>
+                    <div class="price-item"><span>Все тело</span> <span class="price-val"><span class="counter" data-target="659">0</span> ₽</span></div>
+                </div>
+            </div>
+
+            <div class="pricing-card tilt-card reveal">
+                <div class="pricing-icon">✨</div>
+                <h3>Дополнительно</h3>
+                <div class="price-list">
+                    <div class="price-item"><span>Доп. персонаж</span> <span class="price-val">+ 100 %</span></div>
+                    <div class="price-item"><span>Сложный фон</span> <span class="price-val">+ 100 %</span></div>
+                </div>
+            </div>
+
+            <div class="pricing-card deadline-card tilt-card reveal">
+                <div class="pricing-icon">⚡</div>
+                <h3>Срочно?</h3>
+                <div class="deadline-text">Дедалайн<br><span class="gradient-text">3-е суток</span></div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- MARQUEE 3 -->
+    <div class="marquee">
+        <div class="marquee-track">
+            <span>ТВОЙ АРТ ЖДЁТ ТЕБЯ</span><span class="marquee-dot">✦</span>
+            <span>ТВОЙ АРТ ЖДЁТ ТЕБЯ</span><span class="marquee-dot">✦</span>
+            <span>ТВОЙ АРТ ЖДЁТ ТЕБЯ</span><span class="marquee-dot">✦</span>
+            <span>ТВОЙ АРТ ЖДЁТ ТЕБЯ</span><span class="marquee-dot">✦</span>
+        </div>
+    </div>
+
+    <footer id="socials" class="footer">
+        <div class="section-header section-header-left">
+            <span class="section-number">03</span>
+        </div>
+        <h2 class="footer-title">Свяжись <span class="gradient-text">со мной</span></h2>
+        <div class="socials">
+            <a href="https://t.me/BowInHead" target="_blank" class="social-btn magnetic">
+                <span class="social-icon">✈</span>
+                <span class="social-text">
+                    <span class="social-label">Telegram</span>
+                    <span class="social-nick">@BowInHead</span>
+                </span>
+            </a>
+            <button class="social-btn magnetic" onclick="copyDiscord(event)">
+                <span class="social-icon">💬</span>
+                <span class="social-text">
+                    <span class="social-label">Discord</span>
+                    <span class="social-nick">bowinhead</span>
+                </span>
+            </button>
+        </div>
+        <p class="copyright">© 2024 bowinhead — Все права защищены</p>
+    </footer>
+
+    <div id="toast" class="toast">✓ Discord ник скопирован!</div>
+
+    <!-- Lightbox -->
+    <div class="lightbox" id="lightbox">
+        <span class="lightbox-close">&times;</span>
+        <img src="" alt="Full image" id="lightbox-img">
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
