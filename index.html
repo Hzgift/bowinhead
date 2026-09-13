@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bowinhead | Digital Artist</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Прелоадер -->
+    <div id="preloader">
+        <div class="preloader-content">
+            <h1 class="preloader-text">BOWINHEAD</h1>
+            <div class="preloader-bar"><div class="preloader-fill"></div></div>
+        </div>
+    </div>
+
+    <!-- Модальное окно для Артов и Видео -->
+    <div id="lightbox" class="lightbox">
+        <div class="lightbox-content">
+            <span class="lightbox-close" onclick="closeMedia()">&times;</span>
+        </div>
+    </div>
+
+    <div id="progress-bar"></div>
+    <div class="cursor-dot"></div>
+    <div class="cursor-outline"><span class="cursor-text">СМОТРЕТЬ</span></div>
+    <div class="noise-overlay"></div>
+    
+    <div class="bg-blob blob-1"></div>
+    <div class="bg-blob blob-2"></div>
+    <div class="bg-blob blob-3"></div>
+    <canvas id="particles-canvas"></canvas>
+
+    <header class="navbar">
+        <div class="logo magnetic">
+            <span class="logo-text">BOWINHEAD</span>
+            <div class="logo-glow"></div>
+        </div>
+        <nav>
+            <a href="#portfolio" class="nav-link magnetic">Работы</a>
+            <a href="#pricing" class="nav-link magnetic">Прайс</a>
+            <a href="#socials" class="nav-link magnetic">Соцсети</a>
+        </nav>
+    </header>
+
+    <!-- Главный экран -->
+    <section class="hero">
+        <h1 class="hero-title">
+            <span class="word"><span class="letter">А</span><span class="letter">Р</span><span class="letter">Т</span></span><br>
+            <span class="word"><span class="letter">Н</span><span class="letter">А</span> <span class="letter">З</span><span class="letter">А</span><span class="letter">К</span><span class="letter">А</span><span class="letter">З</span></span>
+        </h1>
+        <p class="hero-subtitle">Привет! Я Bowinhead, Рисую арты на заказ</p>
+        
+        <div class="hero-buttons">
+            <a href="#portfolio" class="btn btn-outline magnetic">Работы</a>
+            <a href="#pricing" class="btn btn-primary ripple magnetic">Прайс</a>
+            <a href="#socials" class="btn btn-outline magnetic">Соц сети</a>
+        </div>
+    </section>
+
+    <!-- Секция Работы с сортировкой -->
+    <section id="portfolio" class="section">
+        <h2 class="section-title visible">Мои <span class="gradient-text">Работы</span></h2>
+        
+        <div class="portfolio-filters">
+            <button class="filter-btn active" data-filter="all">ВСЕ</button>
+            <button class="filter-btn" data-filter="art">АРТЫ</button>
+            <button class="filter-btn" data-filter="sticker">СТИКЕРЫ</button>
+            <button class="filter-btn" data-filter="animation">АНИМАЦИИ</button>
+        </div>
+
+        <div class="portfolio-grid">
+            <!-- АРТЫ (art1 - art6) -->
+            <div class="portfolio-card tilt-card reveal" data-category="art" onclick="openMedia('art1.png', 'image')"><img src="art1.png" alt="Art 1"><div class="card-overlay"><span>Art 01</span></div></div>
+            <div class="portfolio-card tilt-card reveal" data-category="art" onclick="openMedia('art2.png', 'image')"><img src="art2.png" alt="Art 2"><div class="card-overlay"><span>Art 02</span></div></div>
+            <div class="portfolio-card tilt-card reveal" data-category="art" onclick="openMedia('art3.png', 'image')"><img src="art3.png" alt="Art 3"><div class="card-overlay"><span>Art 03</span></div></div>
+            <div class="portfolio-card tilt-card reveal" data-category="art" onclick="openMedia('art4.png', 'image')"><img src="art4.png" alt="Art 4"><div class="card-overlay"><span>Art 04</span></div></div>
+            <div class="portfolio-card tilt-card reveal" data-category="art" onclick="openMedia('art5.png', 'image')"><img src="art5.png" alt="Art 5"><div class="card-overlay"><span>Art 05</span></div></div>
+            <div class="portfolio-card tilt-card reveal" data-category="art" onclick="openMedia('art6.png', 'image')"><img src="art6.png" alt="Art 6"><div class="card-overlay"><span>Art 06</span></div></div>
+
+            <!-- СТИКЕРЫ (sticker1 - sticker6) -->
+            <div class="portfolio-card tilt-card reveal" data-category="sticker" onclick="openMedia('sticker1.png', 'image')"><img src="sticker1.png" alt="Sticker 1"><div class="card-overlay"><span>Sticker 01</span></div></div>
+            <div class="portfolio-card tilt-card reveal" data-category="sticker" onclick="openMedia('sticker2.png', 'image')"><img src="sticker2.png" alt="Sticker 2"><div class="card-overlay"><span>Sticker 02</span></div></div>
+            <div class="portfolio-card tilt-card reveal" data-category="sticker" onclick="openMedia('sticker3.png', 'image')"><img src="sticker3.png" alt="Sticker 3"><div class="card-overlay"><span>Sticker 03</span></div></div>
+            <div class="portfolio-card tilt-card reveal" data-category="sticker" onclick="openMedia('sticker4.png', 'image')"><img src="sticker4.png" alt="Sticker 4"><div class="card-overlay"><span>Sticker 04</span></div></div>
+            <div class="portfolio-card tilt-card reveal" data-category="sticker" onclick="openMedia('sticker5.png', 'image')"><img src="sticker5.png" alt="Sticker 5"><div class="card-overlay"><span>Sticker 05</span></div></div>
+            <div class="portfolio-card tilt-card reveal" data-category="sticker" onclick="openMedia('sticker6.png', 'image')"><img src="sticker6.png" alt="Sticker 6"><div class="card-overlay"><span>Sticker 06</span></div></div>
+
+            <!-- АНИМАЦИИ (YouTube) -->
+            <div class="portfolio-card tilt-card reveal video-card" data-category="animation" onclick="openMedia('https://www.youtube.com/embed/d0GvL0VBSvs?autoplay=1', 'video')">
+                <img src="https://img.youtube.com/vi/d0GvL0VBSvs/maxresdefault.jpg" alt="Animation 1">
+                <div class="play-icon">▶</div>
+                <div class="card-overlay"><span>Animation 01</span></div>
+            </div>
+            <div class="portfolio-card tilt-card reveal video-card" data-category="animation" onclick="openMedia('https://www.youtube.com/embed/KdgF5WYPCGM?autoplay=1', 'video')">
+                <img src="https://img.youtube.com/vi/KdgF5WYPCGM/maxresdefault.jpg" alt="Animation 2">
+                <div class="play-icon">▶</div>
+                <div class="card-overlay"><span>Animation 02</span></div>
+            </div>
+            <div class="portfolio-card tilt-card reveal video-card" data-category="animation" onclick="openMedia('https://www.youtube.com/embed/WQ-F5olTymM?autoplay=1', 'video')">
+                <img src="https://img.youtube.com/vi/WQ-F5olTymM/maxresdefault.jpg" alt="Animation 3">
+                <div class="play-icon">▶</div>
+                <div class="card-overlay"><span>Animation 03</span></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Секция Прайс -->
+    <section id="pricing" class="section">
+        <h2 class="section-title visible">Прайс <span class="gradient-text">лист</span></h2>
+        <div class="pricing-grid">
+            <div class="pricing-card tilt-card reveal glow-border">
+                <h3>Базовый <span class="gradient-text">скетч</span></h3>
+                <div class="price-list">
+                    <div class="price-item"><span>По плечи</span> <span class="price-val">50 ₽</span></div>
+                    <div class="price-item"><span>По пояс</span> <span class="price-val">100 ₽</span></div>
+                    <div class="price-item"><span>Все тело</span> <span class="price-val">150 ₽</span></div>
+                </div>
+            </div>
+            <div class="pricing-card featured tilt-card reveal glow-border">
+                <div class="badge">Популярно</div>
+                <h3>Фулл <span class="gradient-text">рендер</span></h3>
+                <div class="price-list">
+                    <div class="price-item"><span>По плечи</span> <span class="price-val">350 ₽</span></div>
+                    <div class="price-item"><span>По пояс</span> <span class="price-val">459 ₽</span></div>
+                    <div class="price-item"><span>Все тело</span> <span class="price-val">659 ₽</span></div>
+                </div>
+            </div>
+            <div class="pricing-card tilt-card reveal glow-border">
+                <h3>Дополнительно</h3>
+                <div class="price-list">
+                    <div class="price-item"><span>Доп. персонаж</span> <span class="price-val">+ 100 %</span></div>
+                    <div class="price-item"><span>Фон</span> <span class="price-val">+ 100 %</span></div>
+                </div>
+            </div>
+            <div class="pricing-card deadline-card tilt-card reveal glow-border">
+                <h3>Срочно?</h3>
+                <div class="deadline-text">Дедалайн<br><span class="gradient-text">3-е суток!</span></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Секция Соцсети -->
+    <section id="socials" class="section">
+        <h2 class="section-title visible">Мои <span class="gradient-text">Соцсети</span></h2>
+        <div class="social-grid">
+            
+            <a href="https://t.me/BowInHead" target="_blank" class="social-card reveal">
+                <div class="social-icon">✈️</div>
+                <h3>Telegram</h3>
+                <p>Основной канал с артами</p>
+            </a>
+
+            <a href="https://www.youtube.com/@BowInHead" target="_blank" class="social-card reveal">
+                <div class="social-icon">▶️</div>
+                <h3>YouTube</h3>
+                <p>Анимации и видео</p>
+            </a>
+
+            <button class="social-card reveal" onclick="copyDiscord(event)">
+                <div class="social-icon">🎮</div>
+                <h3>Discord</h3>
+                <p>bowinhead <span class="copy-hint">(Клик для копирования)</span></p>
+            </button>
+
+            <!-- Стилизованная кнопка 18+ -->
+            <a href="https://t.me/+YTnry9yFbwRhOTYy" target="_blank" class="social-card restricted-card reveal">
+                <div class="warning-badge">18+</div>
+                <div class="social-icon">🔞</div>
+                <h3>Закрытый канал</h3>
+                <p>Только для взрослых</p>
+            </a>
+
+        </div>
+    </section>
+
+    <footer class="footer">
+        <p class="copyright">© 2024 BOWINHEAD. Все права защищены.</p>
+    </footer>
+
+    <div id="toast" class="toast">Discord ник скопирован!</div>
+    <script src="script.js"></script>
+</body>
+</html>
