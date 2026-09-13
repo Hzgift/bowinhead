@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>bowinhead — Digital Artist</title>
+<meta name="description" content="Арт на заказ. Иллюстрации, персонажи, концепт-арт.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=Inter:wght@300;400;500;600&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- WEBGL FLUID BACKGROUND -->
+<canvas id="gl"></canvas>
+
+<!-- GRAIN -->
+<div class="grain"></div>
+
+<!-- PRELOADER -->
+<div id="preloader">
+    <div class="pre-inner">
+        <div class="pre-mark">✦</div>
+        <div class="pre-name">bowinhead</div>
+        <div class="pre-bar"><div class="pre-fill"></div></div>
+        <div class="pre-num"><span id="preNum">0</span>%</div>
+    </div>
+</div>
+
+<!-- CURSOR -->
+<div class="cursor-dot"></div>
+<div class="cursor-ring"><span class="cursor-label"></span></div>
+
+<!-- PROGRESS -->
+<div id="progress"></div>
+
+<!-- NAVBAR -->
+<header class="nav">
+    <a href="#" class="brand" data-cursor="link">
+        <span class="brand-mark">✦</span>
+        <span class="brand-text">bowinhead</span>
+    </a>
+    <nav class="nav-links">
+        <a href="#works" data-cursor="link">Работы</a>
+        <a href="#pricing" data-cursor="link">Прайс</a>
+        <a href="#contact" data-cursor="link">Контакты</a>
+    </nav>
+    <a href="#pricing" class="nav-cta" data-cursor="link">
+        <span>Заказать</span>
+        <svg viewBox="0 0 24 24" width="14" height="14"><path d="M5 12h14M13 5l7 7-7 7" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </a>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+    <div class="hero-kicker"><span class="dot"></span> Digital Artist · Доступен для заказов</div>
+    <h1 class="hero-title">
+        <span class="line line-1">
+            <span class="word" data-word="АРТ"></span>
+        </span>
+        <span class="line line-2">
+            <span class="word italic" data-word="на"></span>
+            <span class="word" data-word="ЗАКАЗ"></span>
+        </span>
+    </h1>
+    <p class="hero-sub">Привет! Я Bowinhead. Рисую арты, от которых сложно отвести взгляд.</p>
+    <div class="hero-actions">
+        <a href="#pricing" class="btn btn-primary magnetic" data-cursor="link">
+            <span>Заказать работу</span>
+            <span class="btn-arrow">→</span>
+        </a>
+        <a href="#works" class="btn btn-ghost magnetic" data-cursor="link">
+            <span>Смотреть работы</span>
+        </a>
+    </div>
+    <div class="hero-foot">
+        <span class="scroll-hint">SCROLL <span class="line-scroll"></span></span>
+        <div class="hero-socials">
+            <a href="https://t.me/BowInHead" target="_blank" data-cursor="link">TG</a>
+            <span>·</span>
+            <a href="#" onclick="copyDiscord(event)" data-cursor="link">DC</a>
+        </div>
+    </div>
+</section>
+
+<!-- MARQUEE -->
+<div class="marquee">
+    <div class="marquee-track">
+        <span>✦ ILLUSTRATION ✦ CHARACTER ✦ CONCEPT ART ✦ PORTRAIT ✦ COMMISSION ✦ </span>
+        <span>✦ ILLUSTRATION ✦ CHARACTER ✦ CONCEPT ART ✦ PORTRAIT ✦ COMMISSION ✦ </span>
+    </div>
+</div>
+
+<!-- WORKS -->
+<section id="works" class="section">
+    <div class="section-head">
+        <div class="eyebrow"><span>01</span> — Избранные работы</div>
+        <h2 class="section-title">Работы <em>Bowinhead</em></h2>
+    </div>
+
+    <div class="bento">
+        <figure class="work-card work-lg" data-cursor="view" data-art="art1.png">
+            <img src="art1.png" alt="Art 1" loading="lazy">
+            <figcaption><span class="w-num">01</span><span class="w-tag">Character</span></figcaption>
+        </figure>
+        <figure class="work-card" data-cursor="view" data-art="art2.png">
+            <img src="art2.png" alt="Art 2" loading="lazy">
+            <figcaption><span class="w-num">02</span><span class="w-tag">Illustration</span></figcaption>
+        </figure>
+        <figure class="work-card" data-cursor="view" data-art="art3.png">
+            <img src="art3.png" alt="Art 3" loading="lazy">
+            <figcaption><span class="w-num">03</span><span class="w-tag">Concept</span></figcaption>
+        </figure>
+        <figure class="work-card work-lg" data-cursor="view" data-art="art4.png">
+            <img src="art4.png" alt="Art 4" loading="lazy">
+            <figcaption><span class="w-num">04</span><span class="w-tag">Portrait</span></figcaption>
+        </figure>
+        <figure class="work-card" data-cursor="view" data-art="art5.png">
+            <img src="art5.png" alt="Art 5" loading="lazy">
+            <figcaption><span class="w-num">05</span><span class="w-tag">Scene</span></figcaption>
+        </figure>
+        <figure class="work-card" data-cursor="view" data-art="art6.png">
+            <img src="art6.png" alt="Art 6" loading="lazy">
+            <figcaption><span class="w-num">06</span><span class="w-tag">Study</span></figcaption>
+        </figure>
+    </div>
+</section>
+
+<!-- PRICING -->
+<section id="pricing" class="section">
+    <div class="section-head">
+        <div class="eyebrow"><span>02</span> — Стоимость</div>
+        <h2 class="section-title">Прайс <em>лист</em></h2>
+    </div>
+
+    <div class="price-grid">
+        <article class="price-card" data-cursor="hover">
+            <div class="pc-head">
+                <span class="pc-tag">Tier · 01</span>
+                <h3>Базовый <em>скетч</em></h3>
+            </div>
+            <ul class="pc-list">
+                <li><span>По плечи</span><b>50 ₽</b></li>
+                <li><span>По пояс</span><b>100 ₽</b></li>
+                <li><span>Все тело</span><b>150 ₽</b></li>
+            </ul>
+        </article>
+
+        <article class="price-card is-featured" data-cursor="hover">
+            <div class="pc-badge">Популярно</div>
+            <div class="pc-head">
+                <span class="pc-tag">Tier · 02</span>
+                <h3>Фулл <em>рендер</em></h3>
+            </div>
+            <ul class="pc-list">
+                <li><span>По плечи</span><b>350 ₽</b></li>
+                <li><span>По пояс</span><b>459 ₽</b></li>
+                <li><span>Все тело</span><b>659 ₽</b></li>
+            </ul>
+        </article>
+
+        <article class="price-card" data-cursor="hover">
+            <div class="pc-head">
+                <span class="pc-tag">Add-on</span>
+                <h3>Дополнительно</h3>
+            </div>
+            <ul class="pc-list">
+                <li><span>Доп. персонаж</span><b>+100 %</b></li>
+                <li><span>Фон</span><b>+100 %</b></li>
+            </ul>
+        </article>
+
+        <article class="price-card is-deadline" data-cursor="hover">
+            <div class="pc-head">
+                <span class="pc-tag">Rush</span>
+                <h3>Срочно?</h3>
+            </div>
+            <div class="deadline">
+                Дедалайн<br>
+                <em>3-е суток!</em>
+            </div>
+        </article>
+    </div>
+</section>
+
+<!-- CONTACT / FOOTER -->
+<footer id="contact" class="contact">
+    <div class="eyebrow"><span>03</span> — Связь</div>
+    <h2 class="contact-title">Давай <em>создадим</em><br>что-то крутое</h2>
+    <div class="contact-links">
+        <a href="https://t.me/BowInHead" target="_blank" class="contact-link" data-cursor="link">
+            <span class="cl-label">Telegram</span>
+            <span class="cl-value">@BowInHead</span>
+            <span class="cl-arrow">→</span>
+        </a>
+        <a href="#" onclick="copyDiscord(event)" class="contact-link" data-cursor="link">
+            <span class="cl-label">Discord</span>
+            <span class="cl-value">bowinhead</span>
+            <span class="cl-arrow">→</span>
+        </a>
+    </div>
+    <div class="copy">
+        <span>© 2025 bowinhead</span>
+        <span>Made with 🖤 and lots of coffee</span>
+    </div>
+</footer>
+
+<!-- LIGHTBOX -->
+<div id="lightbox" class="lightbox">
+    <button class="lb-close" data-cursor="link">✕</button>
+    <img id="lbImg" src="" alt="">
+</div>
+
+<!-- TOAST -->
+<div id="toast" class="toast"><span class="toast-dot"></span> Discord скопирован!</div>
+
+<script src="script.js"></script>
+</body>
+</html>
