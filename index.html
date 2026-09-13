@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>bowinhead — Digital Artist</title>
+<meta name="description" content="Арт на заказ. Иллюстрации, дизайны персонажей, концепт-арты.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- PRELOADER -->
+<div class="preloader" id="preloader">
+  <div class="preloader-inner">
+    <div class="preloader-head">
+      <span class="pl-brand">bowinhead</span>
+      <span class="pl-count" id="plCount">0</span>
+    </div>
+    <div class="pl-track"><div class="pl-fill" id="plFill"></div></div>
+    <div class="pl-foot">
+      <span>Digital Artist</span>
+      <span>Loading experience</span>
+    </div>
+  </div>
+</div>
+
+<!-- CURSOR -->
+<div class="cursor-dot" id="cursorDot"></div>
+<div class="cursor-ring" id="cursorRing"><span class="cursor-label" id="cursorLabel">VIEW</span></div>
+
+<!-- AMBIENT BG -->
+<div class="ambient" aria-hidden="true">
+  <div class="blob blob-a"></div>
+  <div class="blob blob-b"></div>
+  <div class="blob blob-c"></div>
+</div>
+<div class="grain" aria-hidden="true"></div>
+<div class="spotlight" id="spotlight" aria-hidden="true"></div>
+<canvas id="particles" aria-hidden="true"></canvas>
+
+<!-- PROGRESS -->
+<div class="progress-bar" id="progressBar"></div>
+
+<!-- NAV -->
+<header class="nav" id="nav">
+  <a href="#hero" class="nav-logo" data-cursor="hover">
+    <span class="nav-mark">b</span>
+    <span class="nav-name">bowinhead</span>
+  </a>
+  <nav class="nav-links">
+    <a href="#work"  class="nav-link" data-cursor="hover">Work</a>
+    <a href="#price" class="nav-link" data-cursor="hover">Price</a>
+    <a href="#contact" class="nav-link" data-cursor="hover">Contact</a>
+  </nav>
+  <a href="https://t.me/BowInHead" target="_blank" rel="noopener" class="nav-cta" data-cursor="hover">
+    <span>Telegram</span>
+    <svg width="14" height="14" viewBox="0 0 14 14"><path d="M3 11L11 3M11 3H5M11 3v6" stroke="currentColor" stroke-width="1.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+  </a>
+</header>
+
+<!-- HERO -->
+<section class="hero" id="hero">
+  <div class="hero-eyebrow reveal-y">
+    <span class="pulse"></span>
+    <span>Available · 2025 commissions open</span>
+  </div>
+
+  <h1 class="hero-title">
+    <span class="line"><span class="reveal-word">ART</span></span>
+    <span class="line"><span class="reveal-word accent">ON&nbsp;DEMAND</span></span>
+  </h1>
+
+  <div class="hero-bottom">
+    <div class="hero-left reveal-y">
+      <p class="hero-desc">
+        Привет! Я Bowinhead — цифровой художник.<br>
+        Рисую персонажей, иллюстрации и концепт-арты на заказ.
+      </p>
+      <div class="hero-actions">
+        <a href="#price" class="btn btn-primary" data-cursor="hover">
+          <span>Заказать работу</span>
+          <svg width="16" height="16" viewBox="0 0 16 16"><path d="M2 8h11M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+        <a href="#work" class="btn btn-ghost" data-cursor="hover"><span>Смотреть работы</span></a>
+      </div>
+    </div>
+    <div class="hero-right reveal-y">
+      <div class="stat"><b>50+</b><span>работ</span></div>
+      <div class="stat"><b>3+</b><span>года</span></div>
+      <div class="stat"><b>24/7</b><span>на связи</span></div>
+    </div>
+  </div>
+
+  <div class="hero-scroll reveal-y">
+    <span>Scroll</span>
+    <span class="scroll-bar"><i></i></span>
+  </div>
+</section>
+
+<!-- MARQUEE -->
+<div class="marquee" aria-hidden="true">
+  <div class="marquee-track">
+    <span>ILLUSTRATION</span><em>✦</em>
+    <span>CHARACTER&nbsp;DESIGN</span><em>✦</em>
+    <span>CONCEPT&nbsp;ART</span><em>✦</em>
+    <span>PORTRAITS</span><em>✦</em>
+    <span>ILLUSTRATION</span><em>✦</em>
+    <span>CHARACTER&nbsp;DESIGN</span><em>✦</em>
+    <span>CONCEPT&nbsp;ART</span><em>✦</em>
+    <span>PORTRAITS</span><em>✦</em>
+  </div>
+</div>
+
+<!-- WORK -->
+<section class="section" id="work">
+  <div class="section-head reveal-y">
+    <span class="section-num">01 / Selected Works</span>
+    <h2 class="section-title">Работы</h2>
+    <p class="section-sub">Избранное — от быстрых скетчей до детализированных иллюстраций</p>
+  </div>
+
+  <div class="gallery" id="gallery">
+    <figure class="art reveal-y" data-art="art1.png" data-label="01 / Character Design">
+      <div class="art-inner tilt"><img src="art1.png" alt="Art 01" loading="lazy"></div>
+      <figcaption><span>01</span> Character Design</figcaption>
+    </figure>
+    <figure class="art reveal-y" data-art="art2.png" data-label="02 / Illustration">
+      <div class="art-inner tilt"><img src="art2.png" alt="Art 02" loading="lazy"></div>
+      <figcaption><span>02</span> Illustration</figcaption>
+    </figure>
+    <figure class="art reveal-y" data-art="art3.png" data-label="03 / Concept">
+      <div class="art-inner tilt"><img src="art3.png" alt="Art 03" loading="lazy"></div>
+      <figcaption><span>03</span> Concept</figcaption>
+    </figure>
+    <figure class="art reveal-y" data-art="art4.png" data-label="04 / Portrait">
+      <div class="art-inner tilt"><img src="art4.png" alt="Art 04" loading="lazy"></div>
+      <figcaption><span>04</span> Portrait</figcaption>
+    </figure>
+    <figure class="art reveal-y" data-art="art5.png" data-label="05 / Sketch">
+      <div class="art-inner tilt"><img src="art5.png" alt="Art 05" loading="lazy"></div>
+      <figcaption><span>05</span> Sketch</figcaption>
+    </figure>
+    <figure class="art reveal-y" data-art="art6.png" data-label="06 / Scene">
+      <div class="art-inner tilt"><img src="art6.png" alt="Art 06" loading="lazy"></div>
+      <figcaption><span>06</span> Scene</figcaption>
+    </figure>
+  </div>
+</section>
+
+<!-- PRICE -->
+<section class="section" id="price">
+  <div class="section-head reveal-y">
+    <span class="section-num">02 / Rates</span>
+    <h2 class="section-title">Прайс</h2>
+    <p class="section-sub">Прозрачные цены. Всё обсуждаемо — пиши в тг.</p>
+  </div>
+
+  <div class="pricing">
+    <article class="price-card glow reveal-y">
+      <span class="pc-tag">01</span>
+      <h3>Скетч</h3>
+      <ul>
+        <li><span>По плечи</span><em>50 ₽</em></li>
+        <li><span>По пояс</span><em>100 ₽</em></li>
+        <li><span>Все тело</span><em>150 ₽</em></li>
+      </ul>
+      <div class="pc-foot">Черно-белый · 1–2 правки</div>
+    </article>
+
+    <article class="price-card glow featured reveal-y">
+      <div class="pc-badge">Popular</div>
+      <span class="pc-tag">02</span>
+      <h3>Фулл-рендер</h3>
+      <ul>
+        <li><span>По плечи</span><em>350 ₽</em></li>
+        <li><span>По пояс</span><em>459 ₽</em></li>
+        <li><span>Все тело</span><em>659 ₽</em></li>
+      </ul>
+      <div class="pc-foot">Цвет · фон · правки</div>
+    </article>
+
+    <article class="price-card glow reveal-y">
+      <span class="pc-tag">03</span>
+      <h3>Дополнительно</h3>
+      <ul>
+        <li><span>Доп. персонаж</span><em>+100%</em></li>
+        <li><span>Сложный фон</span><em>+100%</em></li>
+      </ul>
+      <div class="pc-foot">К любому тарифу</div>
+    </article>
+
+    <article class="price-card glow deadline reveal-y">
+      <span class="pc-tag">04</span>
+      <h3>Срочно?</h3>
+      <div class="deadline">
+        <span>Дедалайн</span>
+        <em>3-е суток</em>
+      </div>
+      <div class="pc-foot">Плюс к стоимости</div>
+    </article>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer" id="contact">
+  <div class="footer-head reveal-y">
+    <span class="section-num">03 / Get in touch</span>
+    <h2 class="footer-title">Готов <em>создать</em><br>что-то крутое?</h2>
+  </div>
+
+  <div class="footer-contacts">
+    <a href="https://t.me/BowInHead" target="_blank" rel="noopener" class="contact" data-cursor="hover">
+      <span class="c-label">Telegram</span>
+      <span class="c-value">@BowInHead</span>
+      <svg width="22" height="22" viewBox="0 0 22 22"><path d="M5 17L17 5M17 5H8M17 5v9" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </a>
+    <button type="button" class="contact copy-discord" data-cursor="hover">
+      <span class="c-label">Discord</span>
+      <span class="c-value">bowinhead</span>
+      <span class="c-copy">Copy</span>
+    </button>
+  </div>
+
+  <div class="footer-bottom">
+    <span>© 2025 bowinhead</span>
+    <span>Made with obsession</span>
+  </div>
+</footer>
+
+<!-- LIGHTBOX -->
+<div class="lightbox" id="lightbox">
+  <button class="lb-close" id="lbClose" data-cursor="hover" aria-label="Close">
+    <svg width="22" height="22" viewBox="0 0 22 22"><path d="M5 5L17 17M17 5L5 17" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+  </button>
+  <div class="lb-stage"><img id="lbImg" src="" alt=""></div>
+  <div class="lb-caption" id="lbCap"></div>
+</div>
+
+<div class="toast" id="toast">Discord copied → bowinhead</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/lenis@1.1.14/dist/lenis.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
