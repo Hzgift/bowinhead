@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>bowinhead — Digital Artist</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=Inter:wght@300;400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ПРЕЛОАДЕР -->
+<div id="preloader">
+  <div class="pre-inner">
+    <div class="pre-top">
+      <span class="pre-label">Loading portfolio</span>
+      <span class="pre-count" id="preCount">00</span>
+    </div>
+    <div class="pre-bar"><div class="pre-fill" id="preFill"></div></div>
+    <div class="pre-bottom">
+      <span>bowinhead</span>
+      <span class="grad">digital artist ©2025</span>
+    </div>
+  </div>
+</div>
+
+<!-- КУРСОР -->
+<div class="cursor-dot"></div>
+<div class="cursor-ring"><span class="ring-label">VIEW</span></div>
+
+<!-- ФОНЫ -->
+<canvas id="fluid"></canvas>
+<div class="grain"></div>
+<div class="vignette"></div>
+<div class="scrollbar-track"><div class="scrollbar-thumb" id="sbThumb"></div></div>
+
+<!-- НАВ -->
+<header class="nav">
+  <a href="#" class="brand magnetic">
+    <span class="brand-dot"></span>
+    <span class="brand-text">bowinhead</span>
+  </a>
+  <nav class="nav-links">
+    <a href="#work" class="nav-link magnetic"><span>Работы</span></a>
+    <a href="#price" class="nav-link magnetic"><span>Прайс</span></a>
+    <a href="#contact" class="nav-link magnetic"><span>Контакты</span></a>
+  </nav>
+  <a href="https://t.me/BowInHead" target="_blank" class="nav-cta magnetic">Связаться →</a>
+</header>
+
+<main>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-inner">
+    <div class="hero-eyebrow reveal">
+      <span class="eyebrow-dot"></span>
+      <span>OPEN FOR COMMISSIONS — 2025</span>
+    </div>
+
+    <h1 class="hero-title">
+      <span class="line" data-split>ЦИФРОВОЙ</span>
+      <span class="line line-2" data-split>ХУДОЖНИК</span>
+    </h1>
+
+    <div class="hero-bottom reveal">
+      <p class="hero-desc">
+        Привет! Я Bowinhead — рисую арты на заказ.<br>
+        Персонажи, иллюстрации, концепт-арт.
+      </p>
+      <a href="#price" class="hero-cta magnetic" data-cursor="hover">
+        <span class="cta-bg"></span>
+        <span class="cta-text">Заказать арт</span>
+        <span class="cta-arrow">→</span>
+      </a>
+    </div>
+  </div>
+
+  <div class="hero-side">
+    <div class="side-item"><span>01</span><span>PORTRAIT</span></div>
+    <div class="side-item"><span>02</span><span>CHARACTER</span></div>
+    <div class="side-item"><span>03</span><span>SCENE</span></div>
+  </div>
+
+  <div class="scroll-hint">
+    <span>SCROLL</span>
+    <div class="scroll-line"><div class="scroll-line-fill"></div></div>
+  </div>
+</section>
+
+<!-- ТИКЕР -->
+<div class="ticker" aria-hidden="true">
+  <div class="ticker-track">
+    <span>BOWINHEAD ✦ DIGITAL ARTIST ✦ OPEN COMMISSIONS ✦ BOWINHEAD ✦ DIGITAL ARTIST ✦ OPEN COMMISSIONS ✦ </span>
+    <span>BOWINHEAD ✦ DIGITAL ARTIST ✦ OPEN COMMISSIONS ✦ BOWINHEAD ✦ DIGITAL ARTIST ✦ OPEN COMMISSIONS ✦ </span>
+  </div>
+</div>
+
+<!-- РАБОТЫ -->
+<section class="work" id="work">
+  <div class="section-head">
+    <span class="section-num">/01</span>
+    <h2 class="section-title" data-split>ИЗБРАННОЕ</h2>
+    <span class="section-meta">6 RANDOM WORKS</span>
+  </div>
+
+  <div class="work-grid">
+    <article class="work-card span-2 tall" data-img="art1.png" data-cursor="view">
+      <div class="work-media"><img src="art1.png" alt=""><div class="work-tint"></div></div>
+      <div class="work-info"><span class="work-idx">01</span><span class="work-name">Character Design</span></div>
+      <div class="work-spot"></div>
+    </article>
+
+    <article class="work-card" data-img="art2.png" data-cursor="view">
+      <div class="work-media"><img src="art2.png" alt=""><div class="work-tint"></div></div>
+      <div class="work-info"><span class="work-idx">02</span><span class="work-name">Illustration</span></div>
+      <div class="work-spot"></div>
+    </article>
+
+    <article class="work-card" data-img="art3.png" data-cursor="view">
+      <div class="work-media"><img src="art3.png" alt=""><div class="work-tint"></div></div>
+      <div class="work-info"><span class="work-idx">03</span><span class="work-name">Concept Art</span></div>
+      <div class="work-spot"></div>
+    </article>
+
+    <article class="work-card span-2" data-img="art4.png" data-cursor="view">
+      <div class="work-media"><img src="art4.png" alt=""><div class="work-tint"></div></div>
+      <div class="work-info"><span class="work-idx">04</span><span class="work-name">Portrait</span></div>
+      <div class="work-spot"></div>
+    </article>
+
+    <article class="work-card" data-img="art5.png" data-cursor="view">
+      <div class="work-media"><img src="art5.png" alt=""><div class="work-tint"></div></div>
+      <div class="work-info"><span class="work-idx">05</span><span class="work-name">Scene</span></div>
+      <div class="work-spot"></div>
+    </article>
+
+    <article class="work-card" data-img="art6.png" data-cursor="view">
+      <div class="work-media"><img src="art6.png" alt=""><div class="work-tint"></div></div>
+      <div class="work-info"><span class="work-idx">06</span><span class="work-name">Extra</span></div>
+      <div class="work-spot"></div>
+    </article>
+  </div>
+</section>
+
+<!-- ТИКЕР 2 -->
+<div class="ticker ticker-rev" aria-hidden="true">
+  <div class="ticker-track">
+    <span>✦ COMMISSIONS OPEN ✦ COMMISSIONS OPEN ✦ COMMISSIONS OPEN ✦ COMMISSIONS OPEN ✦ </span>
+    <span>✦ COMMISSIONS OPEN ✦ COMMISSIONS OPEN ✦ COMMISSIONS OPEN ✦ COMMISSIONS OPEN ✦ </span>
+  </div>
+</div>
+
+<!-- ПРАЙС -->
+<section class="price" id="price">
+  <div class="section-head">
+    <span class="section-num">/02</span>
+    <h2 class="section-title" data-split>ПРАЙС ЛИСТ</h2>
+    <span class="section-meta">FIXED · NO HIDDEN FEES</span>
+  </div>
+
+  <div class="price-grid">
+    <div class="price-card" data-cursor="hover">
+      <div class="price-head">
+        <span class="price-idx">01</span>
+        <h3>БАЗОВЫЙ<br><span class="grad">СКЕТЧ</span></h3>
+      </div>
+      <ul class="price-list">
+        <li><span>По плечи</span><span class="dots"></span><span class="price-val">50 ₽</span></li>
+        <li><span>По пояс</span><span class="dots"></span><span class="price-val">100 ₽</span></li>
+        <li><span>Все тело</span><span class="dots"></span><span class="price-val">150 ₽</span></li>
+      </ul>
+      <div class="price-spot"></div>
+    </div>
+
+    <div class="price-card featured" data-cursor="hover">
+      <span class="tag">MOST POPULAR</span>
+      <div class="price-head">
+        <span class="price-idx">02</span>
+        <h3>ФУЛЛ<br><span class="grad">РЕНДЕР</span></h3>
+      </div>
+      <ul class="price-list">
+        <li><span>По плечи</span><span class="dots"></span><span class="price-val">350 ₽</span></li>
+        <li><span>По пояс</span><span class="dots"></span><span class="price-val">459 ₽</span></li>
+        <li><span>Все тело</span><span class="dots"></span><span class="price-val">659 ₽</span></li>
+      </ul>
+      <div class="price-spot"></div>
+    </div>
+
+    <div class="price-card" data-cursor="hover">
+      <div class="price-head">
+        <span class="price-idx">03</span>
+        <h3>ДОП.<br><span class="grad">ОПЦИИ</span></h3>
+      </div>
+      <ul class="price-list">
+        <li><span>Персонаж</span><span class="dots"></span><span class="price-val">+100%</span></li>
+        <li><span>Фон</span><span class="dots"></span><span class="price-val">+100%</span></li>
+        <li><span>Правки</span><span class="dots"></span><span class="price-val">FREE</span></li>
+      </ul>
+      <div class="price-spot"></div>
+    </div>
+
+    <div class="price-card deadline" data-cursor="hover">
+      <div class="price-head">
+        <span class="price-idx">04</span>
+        <h3>СРОЧНО?</h3>
+      </div>
+      <div class="deadline-body">
+        <span class="deadline-label">ДЕДАЛАЙН</span>
+        <span class="deadline-num" data-split>3</span>
+        <span class="deadline-sub">суток</span>
+      </div>
+      <div class="price-spot"></div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA / CONTACT -->
+<section class="cta" id="contact">
+  <div class="cta-inner">
+    <span class="cta-eyebrow reveal">READY WHEN YOU ARE</span>
+    <h2 class="cta-title" data-split>ДАВАЙ СОЗДАДИМ</h2>
+    <h2 class="cta-title cta-title-2 grad" data-split>ЧТО-ТО ОХУЕННОЕ</h2>
+
+    <div class="cta-socials">
+      <a href="https://t.me/BowInHead" target="_blank" class="cta-social magnetic" data-cursor="hover">
+        <span class="cs-label">TELEGRAM</span>
+        <span class="cs-handle">@BowInHead</span>
+        <span class="cs-arrow">↗</span>
+      </a>
+      <button class="cta-social magnetic" onclick="copyDiscord(event)" data-cursor="hover">
+        <span class="cs-label">DISCORD</span>
+        <span class="cs-handle">bowinhead</span>
+        <span class="cs-arrow">⧉</span>
+      </button>
+    </div>
+  </div>
+
+  <div class="cta-footer">
+    <span>© 2025 bowinhead</span>
+    <span>MADE WITH RAGE & CAFFEINE</span>
+    <span>ALL RIGHTS RESERVED</span>
+  </div>
+</section>
+
+</main>
+
+<!-- ЛАЙТБОКС -->
+<div id="lightbox" class="lightbox">
+  <button class="lb-close" aria-label="close">✕</button>
+  <div class="lb-media"><img id="lbImg" src="" alt=""></div>
+  <div class="lb-caption" id="lbCap"></div>
+</div>
+
+<div id="toast" class="toast"><span class="toast-dot"></span>Discord скопирован в буфер</div>
+
+<script src="script.js"></script>
+</body>
+</html>
