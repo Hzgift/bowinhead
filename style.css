@@ -62,7 +62,10 @@ body.pressing .cursor-ring{transform:translate(-50%,-50%) scale(.75)}
 
 /* ============ ФОНЫ — теперь ТОЧНО видны ============ */
 .aurora,.particles{position:fixed;inset:0;width:100vw;height:100vh;pointer-events:none}
-.aurora{z-index:-3}
+.aurora{
+  z-index:-3;
+  opacity: 0.5; /* ← было без opacity (то есть 1), стало 50% */
+
 .particles{z-index:-2}
 
 /* ============ МИНИ-НАВ ============ */
